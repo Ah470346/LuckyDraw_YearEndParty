@@ -276,6 +276,7 @@ function RandomPage(props) {
               </ul>
               <div className="action">
                 <Select
+                  size="large"
                   onChange={onSelectChange}
                   className="choose-reward"
                   defaultValue="Chọn giải"
@@ -318,7 +319,9 @@ function RandomPage(props) {
         <section className="right col-3">
           <div className="wrap-list-winner">
             <div className="header">
-              <p>Danh sách trúng thưởng</p>
+              <p>
+                Danh sách trúng thưởng <br /> <span>{select !== '' && select}</span>
+              </p>
             </div>
             <div className="content">
               <ul className="list-item">
