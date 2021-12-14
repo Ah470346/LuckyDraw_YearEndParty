@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+  p {
+    margin: 0;
+  }
+
+  @import './mixins';
+  @import './variables';
+
+  font-family: $fontFamily;
+  color: white;
+  @import '../components/RandomPage';
+}
