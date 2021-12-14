@@ -1,17 +1,11 @@
 import React, { useState } from 'react';
 import { Select, Modal, Input, notification } from 'antd';
-import VBPO from '../assets/VBPO.png';
 import { Transition } from 'react-transition-group';
 import Round from './Round';
 import Axios from 'axios';
 import { useWindowSize } from '@react-hook/window-size';
 import Confetti from 'react-confetti';
-import Gold from '../assets/gold.png';
 import Background from '../assets/background.png';
-import ManyDollar from '../assets/nanyDollar.png';
-import Dollar from '../assets/dollar.png';
-import LittleDollar from '../assets/littleDollar.png';
-import Rose from '../assets/rose.png';
 
 const { Option } = Select;
 
@@ -211,42 +205,6 @@ function RandomPage(props) {
     }, 400);
   };
 
-  //   const onCheckLimit = (value, listReward) => {
-  //     if (value === 'giải đặc biệt' && listReward.length >= 1 && listReward[0].FullName !== undefined) {
-  //       notification.error({ description: 'Số lần quay đã hết' });
-  //       return false;
-  //     } else if (value === 'giải nhất' && listReward.length >= 2) {
-  //       notification.error({ description: 'Số lần quay đã hết' });
-  //       return false;
-  //     } else if (value === 'giải nhì' && listReward.length >= 2) {
-  //       notification.error({ description: 'Số lần quay đã hết' });
-  //       return false;
-  //     } else if (value === 'giải ba' && listReward.length >= 3) {
-  //       notification.error({ description: 'Số lần quay đã hết' });
-  //       return false;
-  //     } else if (value === 'giải may mắn' && listReward.length >= 10) {
-  //       notification.error({ description: 'Số lần quay đã hết' });
-  //       return false;
-  //     }
-  //     return true;
-  //   };
-
-  const onReward = () => {
-    switch (select) {
-      case 'giải đặc biệt':
-        return Gold;
-      case 'giải nhất':
-        return ManyDollar;
-      case 'giải nhì':
-        return Dollar;
-      case 'giải ba':
-        return LittleDollar;
-      case 'giải may mắn':
-        return Rose;
-      default:
-        return '';
-    }
-  };
   return (
     <div className="wrap-page container-fluid m-0">
       <img className="full-background" width={width} height={height} src={Background} alt="error" />
@@ -307,12 +265,6 @@ function RandomPage(props) {
               <button className="clear" onClick={onClear}>
                 CLEAR
               </button>
-              {/* {select !== '' && (
-                <div className="reward">
-                  <p>{select}</p>
-                  <img src={onReward()} alt="error" />
-                </div>
-              )} */}
             </div>
           </div>
         </section>
